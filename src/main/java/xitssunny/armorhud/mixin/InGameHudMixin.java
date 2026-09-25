@@ -10,12 +10,15 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import xitssunny.armorhud.config.ArmorHUDConfig;
 
 @Mixin(GuiIngame.class)
 public abstract class InGameHudMixin {
 
 	@Inject(method = "renderGameOverlay", at = @At("RETURN"))
 	private void renderArmorHud(float tickDelta, CallbackInfo ci) {
+		if (!ArmorHUDConfig.enabled) return;
+
 		Minecraft mc = Minecraft.getMinecraft();
 		if (mc.thePlayer == null || mc.theWorld == null) return;
 
