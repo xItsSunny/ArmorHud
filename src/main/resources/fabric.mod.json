@@ -1,0 +1,30 @@
+{
+	"schemaVersion": 1,
+	"id": "armorhud",
+	"version": "${version}",
+	"name": "ArmorHUD",
+	"description": "Displays the armor!",
+	"authors": [
+		"xItsSunny"
+	],
+	"contact": {
+		"homepage": "https://youtube.com/@xItsSunny",
+		"sources": "https://youtube.com/@xItsSunny"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/armorhud/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"init": [
+      "xitssunny.armorhud.ArmorHUD"
+		]
+	},
+	"mixins": [
+    "armorhud.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.3",
+		"minecraft": "1.8.9",
+		"osl-entrypoints": ">=0.4.0"
+	}
+}

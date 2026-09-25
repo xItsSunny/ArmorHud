@@ -1,0 +1,16 @@
+{
+	"required": true,
+	"minVersion": "0.8",
+	"package": "xitssunny.armorhud.mixin",
+	"compatibilityLevel": "JAVA_8",
+	"mixins": [
+	],
+	"client": [
+    "InGameHudMixin"
+  ],
+	"server": [
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
